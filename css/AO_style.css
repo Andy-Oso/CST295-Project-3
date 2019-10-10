@@ -1,0 +1,23 @@
+/* Custom CSS by Andy Osorio 2019*/
+
+h1.pageTitle{	
+	background-color: #4a4a4a;
+	border-radius: 30px;
+	padding: 20px;
+	
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 50px;
+	text-align: center;
+	letter-spacing: 4px;
+	text-shadow: 4px 4px 4px #aaa;
+	color: White;
+}
+
+
+body {
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	background-attachment: fixed;
+}
