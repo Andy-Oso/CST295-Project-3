@@ -2,22 +2,70 @@
 
 h1.pageTitle{	
 	background-color: #4a4a4a;
-	border-radius: 30px;
 	padding: 20px;
-	
-	font-family: 'Titillium Web', sans-serif;
 	font-size: 50px;
+	font-weight: light;
 	text-align: center;
 	letter-spacing: 4px;
-	text-shadow: 4px 4px 4px #aaa;
 	color: White;
+}
+
+.navigation {
+	overflow: hidden;
+	display: block;
+	background-color: #4a4a4a;
+	padding: 15px
+}
+
+.navigation ul {
+	list-style-type: none;
+	margin: 0;
+	display: inline;
+}
+
+.navigation li {
+	display: inline;
+	padding: 8px;
+}
+
+.navigation a {
+	font-family: 'Titillium Web', sans-serif;
+	color: White;
+	display: inline;
+	text-align: center;
+	padding: 10px;
+	text-decoration: none;
+	-webkit-transition-duration: 0.15s; /* For Safari browser */
+	transition-duration: 0.15s
+}
+
+.navigation a:hover {
+	background-color: #6b6b6b;
+	box-shadow: 0 0 30px grey
+}
+
+.navigation a.active{
+	background-color: #6b6b6b;
+	box-shadow: 0 0 30px grey
 }
 
 
 body {
+	font-family: 'Titillium Web', sans-serif;
+	color: White;
 	background-image: url(../images/bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top;
 	background-attachment: fixed;
+}
+
+footer {
+	margin: 0px, auto;
+	text-align: center;
+	background-color: #4a4a4a;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
