@@ -6,6 +6,26 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700&display=swap">
 <link rel="stylesheet" type="text/css" href="css/AO_style.css">
+
+<script>
+    function createPayee(hours, rate){
+        var payee ={
+            hours: hours,
+            rate: rate,
+            
+            getGrossPay: function(){
+                if(this.hours <= 40){
+                    return this.hours * this.rate;
+                }else{
+                    return (this.hours * this.rate) + ((this.hours - 40) * (this.rate + (this.rate/2)));
+                }
+            }
+        };
+        
+        return payee;
+    }
+</script>
+
 </head>
 <body>
 <header>
@@ -24,13 +44,27 @@
 </div>
 
 <section>
-<h2>Project Information</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2>Create A Payee</h2>
+<p>
+<script>
+    var h = prompt("Please enter the hours worked", 0);
+    var h = parseInt(h);
+    var r = prompt("Please enter the pay rate", 0);
+    var r = parseInt(r);
+    var pay = createPayee(h, r);
+    document.writeln("The following payee was created:<br>");
+    document.write("Hours = " + pay.hours + "; Rate = $" + pay.rate + "; Gross Pay = $" + pay.getGrossPay());
+</script>
+</p>
 </section>
 
-<aside><p>aside content here</p></aside>
-
-<footer><p>footer content here</p></footer>
+<footer><address>SCCC &bull; 1001 Crooked Hill Road &bull; Brentwood NY 11717
+<br>
+<script>
+	var date = new Date();
+	document.write("<em>" + date + "</em>");
+</script>
+</address></footer>
 
 </body>
 </html>
